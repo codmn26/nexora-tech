@@ -1,169 +1,227 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Nexora Tech | High-Tech IT & Cybersécurité</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <!-- Google Fonts futuristes -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-   
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Orbitron', sans-serif;
-            background: #0a0a0f;
-            color: #e0e0e0;
-            scroll-behavior: smooth;
-        }
 
-        header {
-            height: 100vh;
-            background: linear-gradient(135deg, #0ff, #08f);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+```
+<!-- Google Fonts futuristes -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
-        header h1 {
-            font-size: 4rem;
-            color: #0a0a0f;
-            text-shadow: 0 0 15px #0ff, 0 0 30px #08f;
-            animation: glow 2s infinite alternate;
-        }
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+        font-family: 'Orbitron', sans-serif;
+        background: #0a0a0f;
+        color: #e0e0e0;
+        scroll-behavior: smooth;
+    }
 
-        header p {
-            font-size: 1.5rem;
-            color: #0a0a0f;
-            margin-top: 15px;
-            text-shadow: 0 0 10px #0ff;
-        }
+    header {
+        height: 100vh;
+        background: linear-gradient(135deg, #0ff, #08f, #f0f);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
 
-        @keyframes glow {
-            0% { text-shadow: 0 0 15px #0ff, 0 0 30px #08f; }
-            50% { text-shadow: 0 0 25px #0ff, 0 0 50px #08f; }
-            100% { text-shadow: 0 0 15px #0ff, 0 0 30px #08f; }
-        }
+    @keyframes gradientBG {
+        0% {background-position:0% 50%;}
+        50% {background-position:100% 50%;}
+        100% {background-position:0% 50%;}
+    }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10,10,15,0.9);
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-            z-index: 100;
-        }
+    header h1 {
+        font-size: 4rem;
+        color: #0a0a0f;
+        text-shadow: 0 0 20px #0ff, 0 0 40px #f0f, 0 0 60px #08f;
+        animation: glow 2s infinite alternate;
+    }
 
-        nav a {
-            color: #0ff;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+    header p {
+        font-size: 1.5rem;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+    }
 
-        nav a:hover {
-            color: #08f;
-            text-shadow: 0 0 10px #0ff, 0 0 20px #08f;
-        }
+    @keyframes glow {
+        0% { text-shadow: 0 0 15px #0ff, 0 0 30px #f0f; }
+        50% { text-shadow: 0 0 25px #0ff, 0 0 50px #f0f; }
+        100% { text-shadow: 0 0 15px #0ff, 0 0 30px #f0f; }
+    }
 
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(10,10,15,0.9);
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        z-index: 100;
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #0ff;
-            margin-bottom: 50px;
-            text-shadow: 0 0 10px #0ff;
-        }
+    nav a {
+        color: #0ff;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.3s;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+    nav a:hover {
+        color: #08f;
+        text-shadow: 0 0 10px #0ff, 0 0 20px #08f;
+    }
 
-        .card {
-            background: rgba(10,10,15,0.85);
-            border: 1px solid #0ff;
-            border-radius: 15px;
-            padding: 25px;
-            transition: 0.5s;
-            position: relative;
-            overflow: hidden;
-        }
+    section {
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, #0ff, #08f, #0ff, #08f);
-            animation: rotate 6s linear infinite;
-            z-index: 0;
-        }
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #0ff;
+        margin-bottom: 50px;
+        text-shadow: 0 0 10px #0ff;
+    }
 
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
 
-        .card * { position: relative; z-index: 1; }
+    .card {
+        background: rgba(10,10,15,0.8);
+        border: 1px solid #0ff;
+        border-radius: 15px;
+        padding: 25px;
+        transition: 0.5s;
+        position: relative;
+        overflow: hidden;
+    }
 
-        .card h3 {
-            color: #0ff;
-            margin-bottom: 15px;
-        }
+    .card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, #0ff, #08f, #f0f, #0ff);
+        animation: rotate 6s linear infinite;
+        z-index: 0;
+    }
 
-        .price {
-            font-weight: bold;
-            margin-top: 10px;
-            color: #08f;
-            font-size: 1.2rem;
-        }
+    .card * { position: relative; z-index: 1; }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            margin-top: 20px;
-            background: #0ff;
-            color: #0a0a0f;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #0ff;
-            transition: 0.3s;
-        }
+    .card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 0 25px #0ff, 0 0 50px #f0f, 0 0 75px #08f;
+    }
 
-        .btn:hover {
-            background: #08f;
-            box-shadow: 0 0 20px #08f;
-            transform: scale(1.05);
-        }
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 
-        footer {
-            background: #0a0a0f;
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #0ff;
-            color: #0ff;
-            text-shadow: 0 0 5px #0ff;
-        }
+    .card h3 {
+        color: #0ff;
+        margin-bottom: 15px;
+    }
 
-    </style>
+    .price {
+        font-weight: bold;
+        margin-top: 10px;
+        color: #08f;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        margin-top: 20px;
+        background: linear-gradient(45deg, #0ff, #f0f, #08f);
+        color: #0a0a0f;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 12px;
+        box-shadow: 0 0 15px #0ff, 0 0 25px #f0f, 0 0 35px #08f;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px #0ff, 0 0 50px #f0f, 0 0 75px #08f;
+    }
+
+    /* POPUP */
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 200;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        animation: fadeIn 0.3s;
+    }
+
+    .popup-content {
+        background: linear-gradient(135deg, #0ff, #08f, #f0f);
+        margin: 10% auto;
+        padding: 30px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 500px;
+        color: #0a0a0f;
+        text-align: center;
+        box-shadow: 0 0 30px #0ff, 0 0 60px #08f;
+    }
+
+    .close {
+        color: #0a0a0f;
+        float: right;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    #contact p, #contact a {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+    }
+
+    footer {
+        background: #0a0a0f;
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #0ff;
+        color: #0ff;
+        text-shadow: 0 0 5px #0ff;
+    }
+</style>
+```
+
 </head>
 <body>
 
@@ -185,19 +243,46 @@
             <h3>Installation Windows</h3>
             <p>Installation complète + pilotes + optimisation + sécurité.</p>
             <p class="price">À partir de 25 000 FCFA</p>
+            <button class="btn" onclick="openPopup('popup1')">Voir Plus</button>
         </div>
         <div class="card">
             <h3>Nettoyage Virus</h3>
             <p>Suppression de virus avancée + installation antivirus fiable.</p>
             <p class="price">À partir de 15 000 FCFA</p>
+            <button class="btn" onclick="openPopup('popup2')">Voir Plus</button>
         </div>
         <div class="card">
             <h3>Sécurisation Réseau</h3>
             <p>Protection Wi-Fi, configuration routeur et audit sécurité.</p>
             <p class="price">À partir de 30 000 FCFA</p>
+            <button class="btn" onclick="openPopup('popup3')">Voir Plus</button>
         </div>
     </div>
 </section>
+
+<!-- POPUPS -->
+
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <h3>Installation Windows - Détails</h3>
+        <p>Installation propre de Windows, tous les pilotes nécessaires, optimisation du système, et sécurisation contre les virus. Parfait pour un usage professionnel.</p>
+    </div>
+</div>
+<div id="popup2" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <h3>Nettoyage Virus - Détails</h3>
+        <p>Suppression complète des virus, malwares et logiciels indésirables, avec installation d’un antivirus fiable pour protéger votre PC efficacement.</p>
+    </div>
+</div>
+<div id="popup3" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <h3>Sécurisation Réseau - Détails</h3>
+        <p>Protection complète de votre Wi-Fi, configuration sécurisée du routeur, et audit de sécurité pour protéger vos données et appareils connectés.</p>
+    </div>
+</div>
 
 <section id="tarifs">
     <h2>Tarifs</h2>
@@ -219,9 +304,10 @@
 
 <section id="contact">
     <h2>Contactez-Nous</h2>
-    <div class="contact" style="text-align:center;">
-        <p>Disponible à Cotonou et environs.</p>
-        <a class="btn" href="https://wa.me/2290168461413">WhatsApp Direct</a>
+    <div style="text-align:center;">
+        <p>Disponible à <strong>Calavi</strong> et environs</p>
+        <a class="btn" href="https://wa.me/229XXXXXXXX">WhatsApp Direct</a>
+        <p style="margin-top:10px;">Horaires : Lundi - Samedi, 08h00 - 18h00</p>
     </div>
 </section>
 
@@ -229,6 +315,14 @@
     <p>© 2026 NEXORA TECH | Tous droits réservés</p>
 </footer>
 
-</body>
+<script>
+function openPopup(id) {
+    document.getElementById(id).style.display = 'block';
+}
+function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
+}
+</script>
 
+</body>
 </html>
