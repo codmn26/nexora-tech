@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nexora Tech | High-Tech IT & Cybersécurité</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Google Fonts futuristes -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+   
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            height: 100vh;
+            background: linear-gradient(135deg, #0ff, #08f);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: #0a0a0f;
+            text-shadow: 0 0 15px #0ff, 0 0 30px #08f;
+            animation: glow 2s infinite alternate;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: #0a0a0f;
+            margin-top: 15px;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 15px #0ff, 0 0 30px #08f; }
+            50% { text-shadow: 0 0 25px #0ff, 0 0 50px #08f; }
+            100% { text-shadow: 0 0 15px #0ff, 0 0 30px #08f; }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10,10,15,0.9);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #0ff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #08f;
+            text-shadow: 0 0 10px #0ff, 0 0 20px #08f;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #0ff;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px #0ff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(10,10,15,0.85);
+            border: 1px solid #0ff;
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, #0ff, #08f, #0ff, #08f);
+            animation: rotate 6s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .card * { position: relative; z-index: 1; }
+
+        .card h3 {
+            color: #0ff;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #08f;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background: #0ff;
+            color: #0a0a0f;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0ff;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #08f;
+            box-shadow: 0 0 20px #08f;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #0a0a0f;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #0ff;
+            color: #0ff;
+            text-shadow: 0 0 5px #0ff;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NEXORA TECH</h1>
+    <p>Solutions Informatiques & Cybersécurité Professionnelle</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+    <h2>Nos Services</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Installation Windows</h3>
+            <p>Installation complète + pilotes + optimisation + sécurité.</p>
+            <p class="price">À partir de 25 000 FCFA</p>
+        </div>
+        <div class="card">
+            <h3>Nettoyage Virus</h3>
+            <p>Suppression de virus avancée + installation antivirus fiable.</p>
+            <p class="price">À partir de 15 000 FCFA</p>
+        </div>
+        <div class="card">
+            <h3>Sécurisation Réseau</h3>
+            <p>Protection Wi-Fi, configuration routeur et audit sécurité.</p>
+            <p class="price">À partir de 30 000 FCFA</p>
+        </div>
+    </div>
+</section>
+
+<section id="tarifs">
+    <h2>Tarifs</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Installation Complète</h3>
+            <p class="price">25 000 FCFA</p>
+        </div>
+        <div class="card">
+            <h3>Sécurisation Wi-Fi</h3>
+            <p class="price">30 000 FCFA</p>
+        </div>
+        <div class="card">
+            <h3>Audit Sécurité</h3>
+            <p class="price">60 000 FCFA</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contactez-Nous</h2>
+    <div class="contact" style="text-align:center;">
+        <p>Disponible à Cotonou et environs.</p>
+        <a class="btn" href="https://wa.me/229XXXXXXXX">WhatsApp Direct</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 NEXORA TECH | Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
