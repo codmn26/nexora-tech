@@ -302,138 +302,25 @@
     </div>
 </section>
 
-    <div class="service">
-    <h3>Création de Logos Professionnels</h3>
-    <p>
-        Nous concevons des logos modernes et professionnels pour entreprises, 
-        marques et startups. Chaque logo est unique et reflète l'identité de votre activité.
-    </p>
-</div>
-.service {
-    background: #f5f5f5;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-}
-
-    <div class="service">
-    <h3>Initiation à l’Informatique</h3>
-    <p>
-        Formation de base en informatique : utilisation de Word,
-        Excel et navigation Internet.
-    </p>
-</div>
-
-    <div class="service">
-    <h3>Conception Graphique</h3>
-    <p>
-        Création d’affiches publicitaires, flyers et cartes de visite
-        pour entreprises et événements.
-    </p>
-</div>
-
-    <div class="service">
-    <h3>Création de CV Professionnels</h3>
-    <p>
-        Conception de CV modernes et adaptés au marché du travail
-        pour étudiants et professionnels.
-    </p>
-</div>
-
-
- <div class="services">
-
-    <div class="service">
-        <h3>🌐 Création de Sites Web</h3>
-        <p>Conception de sites web modernes, rapides et adaptés aux entreprises, boutiques et organisations. Design professionnel et responsive.</p>
-        <div class="price">À partir de 30 000 FCFA</div>
-    </div>
-
-    <div class="service">
-        <h3>🎨 Création de Logos Professionnels</h3>
-        <p>Nous concevons des logos uniques et professionnels pour toutes marques et entreprises.</p>
-        <div class="price">À partir de 10 000 FCFA</div>
-    </div>
-
-   
-
-    <div class="service">
-        <h3>📄 Création de CV Professionnels</h3>
-        <p>Conception de CV modernes et adaptés au marché du travail.</p>
-        <div class="price">À partir de 3 000 FCFA</div>
-    </div>
-
-    <div class="service">
-        <h3>🎨 Conception Graphique</h3>
-        <p>Création d’affiches, flyers et cartes de visite pour entreprises et événements.</p>
-        <div class="price">À partir de 8 000 FCFA</div>
-    </div>
-
-    <div class="service">
-        <h3>📚 Initiation à l’Informatique</h3>
-        <p>Formation de base : Word, Excel et navigation Internet.</p>
-        <div class="price">À partir de 2 000 FCFA</div>
-    </div>
-
-</div>
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-    background: #ffffff; /* fond blanc */
-}
-
-.service {
-    background: #ffffff; /* carte blanche */
-    width: 280px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-    text-align: center;
-    border: 1px solid #e0e0e0;
-}
-
-.service:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-.service h3 {
-    color: #333333;
-    margin-bottom: 15px;
-}
-
-.service p {
-    color: #555555;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.price {
-    margin-top: 15px;
-    padding: 8px 12px;
-    background: #f2f2f2; /* contraste léger sur fond blanc */
-    border-radius: 8px;
-    font-weight: bold;
-    color: #0077ff;
-    display: inline-block;
-}
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Professionnels</title>
+    <title>NEXORA TECH - Services</title>
     <style>
-        /* --- STYLE GLOBAL --- */
         body {
             font-family: Arial, sans-serif;
-            background: #ffffff;
+            background: #f0f4f8;
             margin: 0;
             padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00f0ff;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
         .services {
@@ -441,124 +328,144 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 40px;
-            background: #ffffff;
+            padding: 20px 40px;
         }
 
-        /* --- CARTE SERVICE --- */
         .service {
-            background: #ffffff;
+            background: linear-gradient(135deg, #6a00ff, #ff00d4);
+            color: white;
             width: 280px;
-            padding: 25px;
+            padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: 0.3s ease;
-            text-align: center;
-            border: 1px solid #e0e0e0;
+            position: relative;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .service:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         .service h3 {
-            color: #333333;
-            margin-bottom: 15px;
+            margin: 0 0 10px;
+            font-size: 18px;
         }
 
         .service p {
-            color: #555555;
             font-size: 14px;
             line-height: 1.5;
         }
 
-        /* --- PRIX --- */
         .price {
-            margin-top: 15px;
-            padding: 8px 12px;
-            background: #f2f2f2;
-            border-radius: 8px;
+            background: #ffffff;      /* fond blanc uniquement pour le prix */
+            color: #0077ff;           /* texte bleu */
             font-weight: bold;
-            color: #0077ff;
+            border-radius: 8px;
+            padding: 8px 12px;
             display: inline-block;
+            border: 1px solid #e0e0e0;
+            margin-top: 10px;
         }
 
-        /* --- BOUTON DEMANDE --- */
         .btn-service {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
+            margin-top: 10px;
+            padding: 10px 15px;
             background: #0077ff;
             color: white;
             border-radius: 8px;
-            text-decoration: none;
             font-weight: bold;
-            transition: 0.3s ease;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
         .btn-service:hover {
             background: #005fcc;
         }
+
+        /* Optionnel : pour les descriptions cachées “Voir plus” */
+        .description {
+            max-height: 60px;
+            overflow: hidden;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="services">
+<h2>Nos Services</h2>
 
-        <!-- Création de Sites Web -->
-        <div class="service">
-            <h3>🌐 Création de Sites Web</h3>
-            <p>Conception de sites web modernes, rapides et adaptés aux entreprises, boutiques et organisations. Design professionnel et responsive.</p>
-            <div class="price">À partir de 30 000 FCFA</div>
-            <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20Site%20Web&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20ce%20service:%20Création%20de%20Site%20Web.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-        </div>
+<div class="services">
 
-        <!-- Création de Logos -->
-        <div class="service">
-            <h3>🎨 Création de Logos Professionnels</h3>
-            <p>Nous concevons des logos uniques et professionnels pour toutes marques et entreprises.</p>
-            <div class="price">À partir de 10 000 FCFA</div>
-            <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20Logo&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20ce%20service:%20Création%20de%20Logo.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-        </div>
-
-        <!-- Maintenance Informatique -->
-        <div class="service">
-            <h3>🖥 Maintenance Informatique</h3>
-            <p>Installation de systèmes, suppression de virus et optimisation d’ordinateurs.</p>
-            <div class="price">À partir de 5 000 FCFA</div>
-            <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Maintenance%20Informatique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20ce%20service:%20Maintenance%20Informatique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-        </div>
-
-        <!-- Création de CV -->
-        <div class="service">
-            <h3>📄 Création de CV Professionnels</h3>
-            <p>Conception de CV modernes et adaptés au marché du travail.</p>
-            <div class="price">À partir de 3 000 FCFA</div>
-            <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20CV&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20ce%20service:%20Création%20de%20CV.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-        </div>
-
-        <!-- Conception Graphique -->
-        <div class="service">
-            <h3>🎨 Conception Graphique</h3>
-            <p>Création d’affiches, flyers et cartes de visite pour entreprises et événements.</p>
-            <div class="price">À partir de 8 000 FCFA</div>
-            <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Conception%20Graphique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20ce%20service:%20Conception%20Graphique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-        </div>
-
-        <!-- Initiation à l’Informatique -->
-        <div class="service">
-            <h3>📚 Initiation à l’Informatique</h3>
-            <p>Formation de base : Word, Excel et navigation Internet.</p>
-            <div class="price">À partir de 2 000 FCFA</div>
-            <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Formation%20Informatique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20ce%20service:%20Formation%20Informatique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-        </div>
-
+    <!-- Installation Windows -->
+    <div class="service">
+        <h3>💻 Installation Windows</h3>
+        <p class="description">Installation complète + pilotes + optimisation + sécurité.</p>
+        <div class="price">À partir de 25 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20d'Installation%20Windows&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Installation%20Windows.%0D%0AMerci!" class="btn-service">Demander ce service</a>
     </div>
+
+    <!-- Nettoyage Virus -->
+    <div class="service">
+        <h3>🧹 Nettoyage Virus</h3>
+        <p class="description">Suppression de virus avancée + installation antivirus fiable.</p>
+        <div class="price">À partir de 15 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Nettoyage%20Virus&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Nettoyage%20Virus.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+    <!-- Sécurisation Réseau -->
+    <div class="service">
+        <h3>🔒 Sécurisation Réseau</h3>
+        <p class="description">Protection Wi-Fi, configuration routeur et audit sécurité.</p>
+        <div class="price">À partir de 30 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Sécurisation%20Réseau&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Sécurisation%20Réseau.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+    <!-- Création de Sites Web -->
+    <div class="service">
+        <h3>🌐 Création de Sites Web</h3>
+        <p class="description">Sites web modernes, rapides et adaptés aux entreprises, boutiques et organisations. Design professionnel et responsive.</p>
+        <div class="price">À partir de 30 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20Site%20Web&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Création%20de%20Sites%20Web.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+    <!-- Création de Logos -->
+    <div class="service">
+        <h3>🎨 Création de Logos</h3>
+        <p class="description">Nous concevons des logos uniques et professionnels pour toutes marques et entreprises.</p>
+        <div class="price">À partir de 10 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20Logo&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Création%20de%20Logo.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+    <!-- Création de CV -->
+    <div class="service">
+        <h3>📄 Création de CV Professionnels</h3>
+        <p class="description">Conception de CV modernes et adaptés au marché du travail.</p>
+        <div class="price">À partir de 3 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20CV&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Création%20de%20CV.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+    <!-- Conception Graphique -->
+    <div class="service">
+        <h3>🎨 Conception Graphique</h3>
+        <p class="description">Création d’affiches, flyers et cartes de visite pour entreprises et événements.</p>
+        <div class="price">À partir de 8 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Conception%20Graphique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Conception%20Graphique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+    <!-- Initiation à l’Informatique -->
+    <div class="service">
+        <h3>📚 Initiation à l’Informatique</h3>
+        <p class="description">Formation de base : Word, Excel et navigation Internet.</p>
+        <div class="price">À partir de 2 000 FCFA</div>
+        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Formation%20Informatique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Formation%20Informatique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
+    </div>
+
+</div>
 
 </body>
 </html>
-    
     
 
     
@@ -586,4 +493,5 @@ function closePopup(id) {
 
 </body>
 </html>
+
 
