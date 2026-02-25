@@ -466,9 +466,65 @@
 
 </body>
 </html>
-    
+  
 
-    
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fond Informatique</title>
+    <style>
+        /* Style du body avec fond sombre et image tech */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a; /* noir très sombre */
+            background-image: url('a_digital_background_background_features_a_dark_t.png'); /* ton image */
+            background-size: cover; /* couvre tout l'écran */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff; /* texte blanc pour contraste */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Overlay noir semi-transparent pour rendre le fond plus subtil */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* ajuster l'opacité si besoin */
+            z-index: -1; /* derrière le contenu */
+        }
+
+        /* Exemple de style pour le contenu */
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue dans l'univers Tech</h1>
+        <p>Ce site utilise un fond sombre inspiré de l'informatique, avec des circuits, du code flou et un style élégant. Tout est conçu pour rester discret et mettre votre contenu en avant.</p>
+    </div>
+</body>
+</html>
 <section id="contact">
     <h2>Contactez-Nous</h2>
     <div style="text-align:center;">
@@ -493,5 +549,6 @@ function closePopup(id) {
 
 </body>
 </html>
+
 
 
