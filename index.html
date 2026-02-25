@@ -1,455 +1,133 @@
 <!DOCTYPE html>
-
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Nexora Tech | High-Tech IT & Cybersécurité</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-```
-<!-- Google Fonts futuristes -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-
-
-</head>
-<body>
-
-<header>
-    <h1>NEXORA TECH</h1>
-    <p>Solutions Informatiques & Cybersécurité Professionnelle</p>
-</header>
-
-<nav>
-    <a href="#services">Services</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="services">
-    <h2>Nos Services</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Installation Windows</h3>
-            <p>Installation complète + pilotes + optimisation + sécurité.</p>
-            <p class="price">À partir de 25 000 FCFA</p>
-            <button class="btn" onclick="openPopup('popup1')">Voir Plus</button>
-        </div>
-        <div class="card">
-            <h3>Nettoyage Virus</h3>
-            <p>Suppression de virus avancée + installation antivirus fiable.</p>
-            <p class="price">À partir de 15 000 FCFA</p>
-            <button class="btn" onclick="openPopup('popup2')">Voir Plus</button>
-        </div>
-        <div class="card">
-            <h3>Sécurisation Réseau</h3>
-            <p>Protection Wi-Fi, configuration routeur et audit sécurité.</p>
-            <p class="price">À partir de 30 000 FCFA</p>
-            <button class="btn" onclick="openPopup('popup3')">Voir Plus</button>
-        </div>
-    </div>
-</section>
-
-<!-- POPUPS -->
-
-<div id="popup1" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup1')">&times;</span>
-        <h3>Installation Windows - Détails</h3>
-        <p>Installation propre de Windows, tous les pilotes nécessaires, optimisation du système, et sécurisation contre les virus. Parfait pour un usage professionnel.</p>
-    </div>
-</div>
-<div id="popup2" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup2')">&times;</span>
-        <h3>Nettoyage Virus - Détails</h3>
-        <p>Suppression complète des virus, malwares et logiciels indésirables, avec installation d’un antivirus fiable pour protéger votre PC efficacement.</p>
-    </div>
-</div>
-<div id="popup3" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closePopup('popup3')">&times;</span>
-        <h3>Sécurisation Réseau - Détails</h3>
-        <p>Protection complète de votre Wi-Fi, configuration sécurisée du routeur, et audit de sécurité pour protéger vos données et appareils connectés.</p>
-    </div>
-</div>
-
-<section id="tarifs">
-    <h2>Tarifs</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Installation Complète</h3>
-            <p class="price">25 000 FCFA</p>
-        </div>
-        <div class="card">
-            <h3>Sécurisation Wi-Fi</h3>
-            <p class="price">30 000 FCFA</p>
-        </div>
-        <div class="card">
-            <h3>Audit Sécurité</h3>
-            <p class="price">60 000 FCFA</p>
-        </div>
-    </div>
-</section>
-
-  <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXORA TECH - Services</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f4f8;
-            margin: 0;
-            padding: 0;
-        }
-
-        h2 {
-            text-align: center;
-            color: #00f0ff;
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px 40px;
-        }
-
-        .service {
-            background: linear-gradient(135deg, #6a00ff, #ff00d4);
-            color: white;
-            width: 280px;
-            padding: 20px;
-            border-radius: 12px;
-            position: relative;
-            transition: 0.3s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
-        .service h3 {
-            margin: 0 0 10px;
-            font-size: 18px;
-        }
-
-        .service p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .price {
-            background: #ffffff;      /* fond blanc uniquement pour le prix */
-            color: #0077ff;           /* texte bleu */
-            font-weight: bold;
-            border-radius: 8px;
-            padding: 8px 12px;
-            display: inline-block;
-            border: 1px solid #e0e0e0;
-            margin-top: 10px;
-        }
-
-        .btn-service {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #0077ff;
-            color: white;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .btn-service:hover {
-            background: #005fcc;
-        }
-
-        /* Optionnel : pour les descriptions cachées “Voir plus” */
-        .description {
-            max-height: 60px;
-            overflow: hidden;
-        }
-
-    </style>
-</head>
-<body>
-
-<h2>Nos Services</h2>
-
-<div class="services">
-
-    <!-- Installation Windows -->
-    <div class="service">
-        <h3>💻 Installation Windows</h3>
-        <p class="description">Installation complète + pilotes + optimisation + sécurité.</p>
-        <div class="price">À partir de 25 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20d'Installation%20Windows&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Installation%20Windows.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Nettoyage Virus -->
-    <div class="service">
-        <h3>🧹 Nettoyage Virus</h3>
-        <p class="description">Suppression de virus avancée + installation antivirus fiable.</p>
-        <div class="price">À partir de 15 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Nettoyage%20Virus&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Nettoyage%20Virus.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Sécurisation Réseau -->
-    <div class="service">
-        <h3>🔒 Sécurisation Réseau</h3>
-        <p class="description">Protection Wi-Fi, configuration routeur et audit sécurité.</p>
-        <div class="price">À partir de 30 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Sécurisation%20Réseau&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Sécurisation%20Réseau.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Création de Sites Web -->
-    <div class="service">
-        <h3>🌐 Création de Sites Web</h3>
-        <p class="description">Sites web modernes, rapides et adaptés aux entreprises, boutiques et organisations. Design professionnel et responsive.</p>
-        <div class="price">À partir de 30 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20Site%20Web&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Création%20de%20Sites%20Web.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Création de Logos -->
-    <div class="service">
-        <h3>🎨 Création de Logos</h3>
-        <p class="description">Nous concevons des logos uniques et professionnels pour toutes marques et entreprises.</p>
-        <div class="price">À partir de 10 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20Logo&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Création%20de%20Logo.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Création de CV -->
-    <div class="service">
-        <h3>📄 Création de CV Professionnels</h3>
-        <p class="description">Conception de CV modernes et adaptés au marché du travail.</p>
-        <div class="price">À partir de 3 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Création%20de%20CV&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Création%20de%20CV.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Conception Graphique -->
-    <div class="service">
-        <h3>🎨 Conception Graphique</h3>
-        <p class="description">Création d’affiches, flyers et cartes de visite pour entreprises et événements.</p>
-        <div class="price">À partir de 8 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Conception%20Graphique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Conception%20Graphique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-    <!-- Initiation à l’Informatique -->
-    <div class="service">
-        <h3>📚 Initiation à l’Informatique</h3>
-        <p class="description">Formation de base : Word, Excel et navigation Internet.</p>
-        <div class="price">À partir de 2 000 FCFA</div>
-        <a href="mailto:nexorahitech@gmail.com?subject=Demande%20de%20Formation%20Informatique&body=Bonjour,%0D%0AJe%20souhaite%20obtenir%20le%20service%20Formation%20Informatique.%0D%0AMerci!" class="btn-service">Demander ce service</a>
-    </div>
-
-</div>
-
-</body>
-</html>
-  <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nexora Tech</title>
+
 <style>
-/* ----------------- Général ----------------- */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0a0a0a; /* Fond sombre */
-    color: #ffffff;
-    line-height: 1.6;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0a0a0a;
+    color:white;
 }
 
-/* ----------------- Fond tech subtil ----------------- */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('a_digital_background_background_features_a_dark_t.png') center/cover no-repeat;
-    opacity: 0.15;
-    z-index: -1;
+/* Fond subtil */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:url('a_digital_background_background_features_a_dark_t.png') center/cover no-repeat;
+    opacity:0.1;
+    z-index:-1;
 }
 
-/* ----------------- Menu néon ----------------- */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #111111;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-nav a {
-    color: #00ffff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
-    transition: color 0.3s, text-shadow 0.3s;
-}
-nav a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+/* MENU */
+nav{
+    display:flex;
+    justify-content:center;
+    background:#111;
+    padding:15px;
+    position:sticky;
+    top:0;
 }
 
-/* ----------------- Sections ----------------- */
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-h1, h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #00ffff;
+nav a{
+    margin:0 20px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-/* ----------------- Services ----------------- */
-.service-item {
-    margin-bottom: 25px;
-    padding: 20px;
-    background-color: #111111;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,255,255,0.1);
-    transition: transform 0.3s;
-}
-.service-item:hover {
-    transform: translateY(-5px);
-}
-.service-item h3 {
-    color: #00ffff;
-    margin-bottom: 10px;
-}
-.service-item p {
-    color: #ccc;
-    font-size: 0.95em;
+nav a:hover{
+    color:#00ffff;
+    text-shadow:0 0 10px #00ffff;
 }
 
-/* ----------------- Tarifs ----------------- */
-.tarif-item {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #111111;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,255,255,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.tarif-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0,255,255,0.3);
-}
-.tarif-item h3 {
-    color: #00ffff;
-    margin-bottom: 10px;
-}
-.tarif-item .price {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #00ffff;
-}
-.tarif-item p.description {
-    color: #ccc;
-    font-size: 0.95em;
-}
-.tarif-item .btn {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #00ffff;
-    color: #000;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-.tarif-item .btn:hover {
-    background-color: #00bfbf;
+/* SECTIONS */
+section{
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
 }
 
-/* ----------------- Témoignages ----------------- */
-.temoignages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-}
-.temoignage-card {
-    background-color: #111111;
-    padding: 20px;
-    border-radius: 10px;
-    font-style: italic;
-    color: #ccc;
-    box-shadow: 0 0 15px rgba(0,255,255,0.1);
-}
-.temoignage-card h4 {
-    color: #00ffff;
-    margin-top: 15px;
+h1{
+    text-align:center;
+    color:#00ffff;
+    margin-bottom:40px;
 }
 
-/* ----------------- Contact ----------------- */
-#contact {
-    text-align: center;
-    padding: 60px 20px;
-}
-#contact a.btn-contact {
-    padding: 12px 25px;
-    background-color: #00ffff;
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-#contact a.btn-contact:hover {
-    background-color: #00bfbf;
+/* SERVICES */
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
-/* ----------------- Responsive ----------------- */
-@media(max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
+.card{
+    background:#111;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,255,255,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,255,255,0.3);
+}
+
+.card h3{
+    color:#00ffff;
+}
+
+.price{
+    font-size:1.8em;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#00ffff;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#00bfbf;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    nav{
+        flex-direction:column;
+        align-items:center;
     }
-    nav a {
-        margin: 8px 0;
-        font-size: 1em;
-    }
-    h1 {
-        font-size: 1.8em;
-    }
-    h3 {
-        font-size: 1.2em;
-    }
-    p.description, .service-item p {
-        font-size: 0.9em;
-    }
-    .tarif-item, .service-item {
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-    body::before {
-        background-size: contain;
-        opacity: 0.1;
+    nav a{
+        margin:10px 0;
     }
 }
 </style>
 </head>
+
 <body>
 
-<!-- Menu -->
 <nav>
     <a href="#services">Services</a>
     <a href="#tarifs">Tarifs</a>
@@ -457,641 +135,101 @@ h1, h2 {
     <a href="#contact">Contact</a>
 </nav>
 
-<!-- Section Services -->
+<!-- SERVICES -->
 <section id="services">
-    <h1>Nos Services</h1>
-    <div class="service-item">
-        <h3>Installation & Configuration</h3>
-        <p>Nous installons et configurons tous vos équipements pour un fonctionnement optimal.</p>
-    </div>
-    <div class="service-item">
-        <h3>Audit Sécurité</h3>
-        <p>Analyse complète de votre réseau et recommandations pour améliorer votre sécurité.</p>
-    </div>
-    <div class="service-item">
-        <h3>Maintenance & Support</h3>
-        <p>Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
-    </div>
-    <div class="service-item">
-        <h3>Formation</h3>
-        <p>Sessions personnalisées pour vos équipes sur logiciels et sécurité.</p>
-    </div>
-</section>
+<h1>Nos Services</h1>
+<div class="services-grid">
 
-<!-- Section Tarifs -->
-<section id="tarifs">
-    <h1>Nos Tarifs</h1>
-    <div class="tarif-item">
-        <h3>Installation complète</h3>
-        <p class="price">100 000 FCFA</p>
-        <p class="description">Installation de tous vos équipements + configuration complète du système.</p>
-        <a href="#contact" class="btn">Demander ce service</a>
-    </div>
-    <div class="tarif-item">
-        <h3>Audit Sécurité</h3>
-        <p class="price">75 000 FCFA</p>
-        <p class="description">Analyse complète de votre réseau et recommandations pour renforcer la sécurité.</p>
-        <a href="#contact" class="btn">Demander ce service</a>
-    </div>
-    <div class="tarif-item">
-        <h3>Maintenance</h3>
-        <p class="price">50 000 FCFA</p>
-        <p class="description">Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
-        <a href="#contact" class="btn">Demander ce service</a>
-    </div>
-    <div class="tarif-item">
-        <h3>Formation</h3>
-        <p class="price">60 000 FCFA</p>
-        <p class="description">Sessions de formation personnalisées pour vos équipes sur les logiciels et la sécurité.</p>
-        <a href="#contact" class="btn">Demander ce service</a>
-    </div>
-</section>
-
-<!-- Section Témoignages -->
-<section id="temoignages">
-    <h1>Témoignages</h1>
-    <div class="temoignages-grid">
-        <div class="temoignage-card">
-            <p>"Excellente prestation, l’équipe a été très professionnelle et rapide."</p>
-            <h4>- Jean M.</h4>
-        </div>
-        <div class="temoignage-card">
-            <p>"Audit sécurité très complet, nous avons beaucoup appris."</p>
-            <h4>- Amina K.</h4>
-        </div>
-        <div class="temoignage-card">
-            <p>"La maintenance a sauvé notre réseau, je recommande Nexora Tech !"</p>
-            <h4>- Didier T.</h4>
-        </div>
-    </div>
-</section>
-
-<!-- Section Contact -->
-<section id="contact">
-    <h1>Contactez-Nous</h1>
-    <a href="mailto:contact@nexora-tech.com" class="btn-contact">Envoyer un message</a>
-</section>
-
-</body>
-</html>
-
-    <!-- Bouton flottant pour ouvrir l'assistante -->
-<button id="assistantBtn">💬 Assistant</button>
-
-<!-- Fenêtre de chat -->
-<div id="assistantChat" style="display:none;">
-    <div id="chatHeader">Assistante Virtuelle</div>
-    <div id="chatBody"></div>
-    <input type="text" id="chatInput" placeholder="Écris ta question...">
-    <button id="sendBtn">Envoyer</button>
+<div class="card">
+<h3>Installation & Configuration</h3>
+<p>Installation rapide et configuration optimale de vos équipements.</p>
 </div>
 
-<style>
-/* --- Bouton flottant --- */
-#assistantBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #00ffff;
-    color: #000;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #00ffff;
-    transition: transform 0.3s;
-}
-#assistantBtn:hover { transform: scale(1.1); }
+<div class="card">
+<h3>Audit Sécurité</h3>
+<p>Analyse des failles et recommandations pour sécuriser votre réseau.</p>
+</div>
 
-/* --- Fenêtre chat --- */
-#assistantChat {
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
-    width: 320px;
-    max-height: 450px;
-    background-color: #111111;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 25px #00ffff;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    z-index: 999;
-    animation: appear 0.5s ease;
-}
-@keyframes appear {
-    from {opacity:0; transform: translateY(20px);}
-    to {opacity:1; transform: translateY(0);}
-}
+<div class="card">
+<h3>Maintenance & Support</h3>
+<p>Assistance technique et entretien régulier de votre système.</p>
+</div>
 
-#chatHeader {
-    background-color: #00ffff;
-    color: #000;
-    padding: 10px;
-    font-weight: bold;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
-    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
-}
+<div class="card">
+<h3>Formation</h3>
+<p>Formations personnalisées en outils informatiques et cybersécurité.</p>
+</div>
 
-#chatBody {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-    font-size: 0.95em;
-}
-
-#chatInput {
-    border: none;
-    padding: 10px;
-    border-top: 1px solid #00ffff;
-    width: calc(100% - 60px);
-    background-color: #111111;
-    color: #fff;
-}
-
-#sendBtn {
-    width: 50px;
-    border: none;
-    background-color: #00ffff;
-    color: #000;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-#sendBtn:hover { background-color: #00bfbf; }
-
-/* --- Messages --- */
-.userMsg { color:#ffffff; margin:5px 0; }
-.assistantMsg { color:#00ffff; margin:5px 0; }
-</style>
-
-<script>
-const assistantBtn = document.getElementById("assistantBtn");
-const assistantChat = document.getElementById("assistantChat");
-const chatBody = document.getElementById("chatBody");
-const chatInput = document.getElementById("chatInput");
-const sendBtn = document.getElementById("sendBtn");
-
-// --- Toggle chat window ---
-assistantBtn.onclick = () => {
-    assistantChat.style.display = assistantChat.style.display === "none" ? "flex" : "none";
-};
-
-// --- Initialiser le rapport ---
-let rapport = JSON.parse(localStorage.getItem("rapport")) || {
-    projets: ["Nexora Tech"],
-    actionsEffectuees: [],
-    prochainesEtapes: ["Optimiser section Services", "Vérifier responsive mobile", "Ajouter glow sur cartes"],
-    notes: ["Menu néon ajouté", "Prix visibles", "Témoignages inclus"]
-};
-
-// --- Fonction pour afficher le rapport ---
-function afficherRapport() {
-    chatBody.innerHTML = ""; // réinitialise
-    chatBody.innerHTML += `<div class="assistantMsg"><b>Rapport actuel :</b></div>`;
-    chatBody.innerHTML += `<div class="assistantMsg">Projets: ${rapport.projets.join(", ")}</div>`;
-    chatBody.innerHTML += `<div class="assistantMsg">Actions effectuées: ${rapport.actionsEffectuees.join(", ") || "Aucune"}</div>`;
-    chatBody.innerHTML += `<div class="assistantMsg">Prochaines étapes: ${rapport.prochainesEtapes.join(", ")}</div>`;
-    chatBody.innerHTML += `<div class="assistantMsg">Notes: ${rapport.notes.join(", ")}</div>`;
-    chatBody.scrollTop = chatBody.scrollHeight;
-}
-
-// --- Afficher le rapport dès l'ouverture ---
-afficherRapport();
-
-// --- Fonction envoyer message ---
-function envoyerMessage() {
-    const userText = chatInput.value.trim();
-    if(!userText) return;
-
-    // Message utilisateur
-    chatBody.innerHTML += `<div class="userMsg"><b>Vous:</b> ${userText}</div>`;
-
-    // Réponse automatique simple
-    let response = "Désolé, je n'ai pas compris 😅";
-    const text = userText.toLowerCase();
-
-    if(text.includes("services")) response = "Nos services: Installation, Audit Sécurité, Maintenance, Formation.";
-    if(text.includes("tarifs")) response = "Nos tarifs vont de 50 000 FCFA à 100 000 FCFA selon le service.";
-    if(text.includes("contact")) response = "Vous pouvez nous contacter via le formulaire ou à contact@nexora-tech.com.";
-    if(text.includes("rapport")) response = "Voici ton rapport actuel. Consulte les messages ci-dessus.";
-
-    // Ajouter la réponse
-    chatBody.innerHTML += `<div class="assistantMsg"><b>Assistant:</b> ${response}</div>`;
-    chatBody.scrollTop = chatBody.scrollHeight;
-
-    // Sauvegarder le message dans le rapport pour suivi
-    rapport.actionsEffectuees.push(userText);
-    localStorage.setItem("rapport", JSON.stringify(rapport));
-
-    chatInput.value = "";
-}
-
-// --- Bouton envoyer ---
-sendBtn.onclick = envoyerMessage;
-
-// --- Entrée clavier "Enter" ---
-chatInput.addEventListener("keypress", function(e) {
-    if(e.key === "Enter") envoyerMessage();
-});
-</script> 
-    <!-- Section Services -->
-<section id="services">
-    <h1>Nos Services</h1>
-    <div class="service-item">
-        <h3>Installation & Configuration</h3>
-        <p>Installation rapide et configuration optimale de tous vos équipements.</p>
-    </div>
-    <div class="service-item">
-        <h3>Audit Sécurité</h3>
-        <p>Analyse générale pour détecter les failles et sécuriser votre réseau.</p>
-    </div>
-    <div class="service-item">
-        <h3>Maintenance & Support</h3>
-        <p>Entretien régulier et dépannage rapide pour tous vos équipements.</p>
-    </div>
+</div>
 </section>
 
-<!-- Section Tarifs -->
+<!-- TARIFS -->
 <section id="tarifs">
-    <h1>Nos Tarifs</h1>
-    <div class="tarif-item">
-        <h3>Audit Sécurité</h3>
-        <p class="price">75 000 FCFA</p>
-        <p class="description">Audit complet détaillé : analyse du réseau, détection de failles, recommandations et plan d’action.</p>
-        <a href="#contact" class="btn">Demander ce service</a>
-    </div>
-</section>
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fond Informatique</title>
-    <style>
-        /* Style du body avec fond sombre et image tech */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #0a0a0a; /* noir très sombre */
-            background-image: url('a_digital_background_background_features_a_dark_t.png'); /* ton image */
-            background-size: cover; /* couvre tout l'écran */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            color: #ffffff; /* texte blanc pour contraste */
-            font-family: Arial, sans-serif;
-        }
+<h1>Nos Tarifs</h1>
+<div class="services-grid">
 
-        /* Overlay noir semi-transparent pour rendre le fond plus subtil */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* ajuster l'opacité si besoin */
-            z-index: -1; /* derrière le contenu */
-        }
+<div class="card">
+<h3>Installation complète</h3>
+<p class="price">100 000 FCFA</p>
+<a href="#contact" class="btn">Demander ce service</a>
+</div>
 
-        /* Exemple de style pour le contenu */
-        .container {
-            padding: 50px;
-            text-align: center;
-        }
+<div class="card">
+<h3>Audit Sécurité</h3>
+<p class="price">75 000 FCFA</p>
+<a href="#contact" class="btn">Demander ce service</a>
+</div>
 
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
+<div class="card">
+<h3>Maintenance</h3>
+<p class="price">50 000 FCFA</p>
+<a href="#contact" class="btn">Demander ce service</a>
+</div>
 
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            max-width: 700px;
-            margin: auto;
-        }
-    </style>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexora Tech - Tarifs</title>
-<style>
-    /* ----------------- Général ----------------- */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0a0a0a; /* Fond sombre */
-        color: #ffffff;
-        line-height: 1.6;
-    }
+<div class="card">
+<h3>Formation</h3>
+<p class="price">60 000 FCFA</p>
+<a href="#contact" class="btn">Demander ce service</a>
+</div>
 
-    /* ----------------- Menu ----------------- */
-    nav {
-        display: flex;
-        justify-content: center;
-        background-color: #111111;
-        padding: 15px;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
-    nav a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 20px;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-    nav a:hover {
-        color: #00ffff; /* Accent tech */
-    }
-
-    /* ----------------- Section ----------------- */
-    section {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: auto;
-    }
-    h1, h2 {
-        text-align: center;
-        margin-bottom: 40px;
-        color: #00ffff;
-    }
-
-    /* ----------------- Tableaux Tarifs ----------------- */
-    .pricing-table {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-    .pricing-card {
-        background-color: #111111;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 0 15px rgba(0,255,255,0.1);
-    }
-    .pricing-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 25px rgba(0,255,255,0.3);
-    }
-    .pricing-card h3 {
-        margin-bottom: 15px;
-        color: #00ffff;
-    }
-    .price {
-        font-size: 2em;
-        margin-bottom: 15px;
-        color: #ffffff;
-    }
-    .description {
-        font-size: 0.9em;
-        color: #ccc;
-        margin-bottom: 20px;
-    }
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #00ffff;
-        color: #000;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background 0.3s;
-    }
-    .btn:hover {
-        background-color: #00bfbf;
-    }
-
-    /* ----------------- Overlay Fond Subtil ----------------- */
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: url('a_digital_background_background_features_a_dark_t.png') center/cover no-repeat;
-        opacity: 0.15;
-        z-index: -1;
-    }
-
-    /* ----------------- Responsive ----------------- */
-    @media(max-width: 600px) {
-        nav {
-            flex-direction: column;
-        }
-        nav a {
-            margin: 10px 0;
-        }
-    }
-</style>
-</head>
-<body>
-
-<!-- Menu -->
-<nav>
-    <a href="#services">Services</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- Section Tarifs -->
-<section id="tarifs">
-    <h1>Nos Tarifs</h1>
-    <div class="pricing-table">
-        <div class="pricing-card">
-            <h3>Installation complète</h3>
-            <p class="price">100 000 FCFA</p>
-            <p class="description">Installation de tous vos équipements + configuration complète du système.</p>
-            <a href="#contact" class="btn">Demander ce service</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Audit Sécurité</h3>
-            <p class="price">75 000 FCFA</p>
-            <p class="description">Analyse complète de votre réseau et recommandations pour renforcer la sécurité.</p>
-            <a href="#contact" class="btn">Demander ce service</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Maintenance</h3>
-            <p class="price">50 000 FCFA</p>
-            <p class="description">Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
-            <a href="#contact" class="btn">Demander ce service</a>
-        </div>
-        <div class="pricing-card">
-            <h3>Formation</h3>
-            <p class="price">60 000 FCFA</p>
-            <p class="description">Sessions de formation personnalisées pour vos équipes sur les logiciels et la sécurité.</p>
-            <a href="#contact" class="btn">Demander ce service</a>
-        </div>
-    </div>
+</div>
 </section>
 
-</body>
-</html>
-
-   <section id="services">
-    <h1>Nos Services</h1>
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>Installation & Configuration</h3>
-            <p class="description">Nous installons et configurons tous vos équipements pour un fonctionnement optimal.</p>
-        </div>
-        <div class="service-card">
-            <h3>Audit Sécurité</h3>
-            <p class="description">Analyse complète de votre réseau et recommandations pour améliorer votre sécurité.</p>
-        </div>
-        <div class="service-card">
-            <h3>Maintenance & Support</h3>
-            <p class="description">Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
-        </div>
-        <div class="service-card">
-            <h3>Formation</h3>
-            <p class="description">Sessions personnalisées pour vos équipes sur logiciels et sécurité.</p>
-        </div>
-    </div>
-</section>
-
+<!-- TEMOIGNAGES -->
 <section id="temoignages">
-    <h1>Témoignages</h1>
-    <div class="temoignages-grid">
-        <div class="temoignage-card">
-            <p>"Excellente prestation, l’équipe a été très professionnelle et rapide."</p>
-            <h4>- Jean M.</h4>
-        </div>
-        <div class="temoignage-card">
-            <p>"Audit sécurité très complet, nous avons beaucoup appris."</p>
-            <h4>- Amina K.</h4>
-        </div>
-        <div class="temoignage-card">
-            <p>"La maintenance a sauvé notre réseau, je recommande Nexora Tech !"</p>
-            <h4>- Didier T.</h4>
-        </div>
-    </div>
+<h1>Témoignages</h1>
+<div class="services-grid">
+
+<div class="card">
+<p>"Excellente prestation, équipe très professionnelle."</p>
+<h4>- Jean M.</h4>
+</div>
+
+<div class="card">
+<p>"Audit sécurité très complet."</p>
+<h4>- Amina K.</h4>
+</div>
+
+<div class="card">
+<p>"Maintenance efficace et rapide."</p>
+<h4>- Didier T.</h4>
+</div>
+
+</div>
 </section>
 
-<section id="partenaires">
-    <h1>Nos Partenaires</h1>
-    <div class="logos-grid">
-        <img src="logo1.png" alt="Partenaire 1">
-        <img src="logo2.png" alt="Partenaire 2">
-        <img src="logo3.png" alt="Partenaire 3">
-        <img src="logo4.png" alt="Partenaire 4">
-    </div>
-</section>
-
-<style>
-/* Services */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-}
-.service-card {
-    background-color: #111111;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 15px rgba(0,255,255,0.1);
-}
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(0,255,255,0.3);
-}
-.service-card h3 {
-    color: #00ffff;
-    margin-bottom: 15px;
-}
-.service-card p {
-    color: #ccc;
-}
-
-/* Témoignages */
-.temoignages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-}
-.temoignage-card {
-    background-color: #111111;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    font-style: italic;
-    color: #ccc;
-    box-shadow: 0 0 15px rgba(0,255,255,0.1);
-}
-.temoignage-card h4 {
-    margin-top: 15px;
-    color: #00ffff;
-}
-
-/* Logos partenaires */
-.logos-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 40px 20px;
-}
-.logos-grid img {
-    max-height: 80px;
-    filter: brightness(0.8);
-    transition: transform 0.3s, filter 0.3s;
-}
-.logos-grid img:hover {
-    transform: scale(1.1);
-    filter: brightness(1);
-}
-</style>
-    
-</head>
-<body>
-    <div class="container">
-        <h1>Bienvenue dans l'univers Tech</h1>
-        <p>Ce site utilise un fond sombre inspiré de l'informatique, avec des circuits, du code flou et un style élégant. Tout est conçu pour rester discret et mettre votre contenu en avant et améliorer votre expérience.</p>
-    </div>
-</body>
-</html>
+<!-- CONTACT -->
 <section id="contact">
-    <h2>Contactez-Nous</h2>
-    <div style="text-align:center;">
-        <p>Disponible à <strong>Calavi</strong> et environs</p>
-        <a class="btn" href="https://wa.me/2290144218580">WhatsApp Direct</a>
-        <p style="margin-top:10px;">Horaires : Lundi - Samedi, 08h00 - 18h00</p>
-    </div>
+<h1>Contact</h1>
+<div style="text-align:center;">
+<p>Disponible à Calavi et environs</p>
+<a href="https://wa.me/2290144218580" class="btn">WhatsApp Direct</a>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 NEXORA TECH | Tous droits réservés</p>
+© 2026 NEXORA TECH | Tous droits réservés
 </footer>
-
-<script>
-function openPopup(id) {
-    document.getElementById(id).style.display = 'block';
-}
-function closePopup(id) {
-    document.getElementById(id).style.display = 'none';
-}
-</script>
 
 </body>
 </html>
-
-
-
-
-
