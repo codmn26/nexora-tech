@@ -10,217 +10,7 @@
 <!-- Google Fonts futuristes -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
-<style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-        font-family: 'Orbitron', sans-serif;
-        background: #0a0a0f;
-        color: #e0e0e0;
-        scroll-behavior: smooth;
-    }
 
-    header {
-        height: 100vh;
-        background: linear-gradient(135deg, #0ff, #08f, #f0f);
-        background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    @keyframes gradientBG {
-        0% {background-position:0% 50%;}
-        50% {background-position:100% 50%;}
-        100% {background-position:0% 50%;}
-    }
-
-    header h1 {
-        font-size: 4rem;
-        color: #0a0a0f;
-        text-shadow: 0 0 20px #0ff, 0 0 40px #f0f, 0 0 60px #08f;
-        animation: glow 2s infinite alternate;
-    }
-
-    header p {
-        font-size: 1.5rem;
-        text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
-    }
-
-    @keyframes glow {
-        0% { text-shadow: 0 0 15px #0ff, 0 0 30px #f0f; }
-        50% { text-shadow: 0 0 25px #0ff, 0 0 50px #f0f; }
-        100% { text-shadow: 0 0 15px #0ff, 0 0 30px #f0f; }
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(10,10,15,0.9);
-        display: flex;
-        justify-content: center;
-        padding: 15px 0;
-        z-index: 100;
-    }
-
-    nav a {
-        color: #0ff;
-        margin: 0 20px;
-        text-decoration: none;
-        font-weight: bold;
-        letter-spacing: 1px;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #08f;
-        text-shadow: 0 0 10px #0ff, 0 0 20px #08f;
-    }
-
-    section {
-        padding: 80px 20px;
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #0ff;
-        margin-bottom: 50px;
-        text-shadow: 0 0 10px #0ff;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-    }
-
-    .card {
-        background: rgba(10,10,15,0.8);
-        border: 1px solid #0ff;
-        border-radius: 15px;
-        padding: 25px;
-        transition: 0.5s;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .card::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, #0ff, #08f, #f0f, #0ff);
-        animation: rotate 6s linear infinite;
-        z-index: 0;
-    }
-
-    .card * { position: relative; z-index: 1; }
-
-    .card:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow: 0 0 25px #0ff, 0 0 50px #f0f, 0 0 75px #08f;
-    }
-
-    @keyframes rotate {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    .card h3 {
-        color: #0ff;
-        margin-bottom: 15px;
-    }
-
-    .price {
-        font-weight: bold;
-        margin-top: 10px;
-        color: #08f;
-        font-size: 1.2rem;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 12px 25px;
-        margin-top: 20px;
-        background: linear-gradient(45deg, #0ff, #f0f, #08f);
-        color: #0a0a0f;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 12px;
-        box-shadow: 0 0 15px #0ff, 0 0 25px #f0f, 0 0 35px #08f;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 25px #0ff, 0 0 50px #f0f, 0 0 75px #08f;
-    }
-
-    /* POPUP */
-    .popup {
-        display: none;
-        position: fixed;
-        z-index: 200;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.85);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        animation: fadeIn 0.3s;
-    }
-
-    .popup-content {
-        background: linear-gradient(135deg, #0ff, #08f, #f0f);
-        margin: 10% auto;
-        padding: 30px;
-        border-radius: 15px;
-        width: 80%;
-        max-width: 500px;
-        color: #0a0a0f;
-        text-align: center;
-        box-shadow: 0 0 30px #0ff, 0 0 60px #08f;
-    }
-
-    .close {
-        color: #0a0a0f;
-        float: right;
-        font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-
-    #contact p, #contact a {
-        text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
-    }
-
-    footer {
-        background: #0a0a0f;
-        text-align: center;
-        padding: 30px;
-        border-top: 1px solid #0ff;
-        color: #0ff;
-        text-shadow: 0 0 5px #0ff;
-    }
-</style>
-```
 
 </head>
 <body>
@@ -466,8 +256,476 @@
 
 </body>
 </html>
-  
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexora Tech</title>
+<style>
+/* ----------------- Général ----------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a; /* Fond sombre */
+    color: #ffffff;
+    line-height: 1.6;
+}
 
+/* ----------------- Fond tech subtil ----------------- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('a_digital_background_background_features_a_dark_t.png') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* ----------------- Menu néon ----------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #111111;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+/* ----------------- Sections ----------------- */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00ffff;
+}
+
+/* ----------------- Services ----------------- */
+.service-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.1);
+    transition: transform 0.3s;
+}
+.service-item:hover {
+    transform: translateY(-5px);
+}
+.service-item h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+.service-item p {
+    color: #ccc;
+    font-size: 0.95em;
+}
+
+/* ----------------- Tarifs ----------------- */
+.tarif-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tarif-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+.tarif-item h3 {
+    color: #00ffff;
+    margin-bottom: 10px;
+}
+.tarif-item .price {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00ffff;
+}
+.tarif-item p.description {
+    color: #ccc;
+    font-size: 0.95em;
+}
+.tarif-item .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #00ffff;
+    color: #000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.tarif-item .btn:hover {
+    background-color: #00bfbf;
+}
+
+/* ----------------- Témoignages ----------------- */
+.temoignages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+.temoignage-card {
+    background-color: #111111;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+    color: #ccc;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+}
+.temoignage-card h4 {
+    color: #00ffff;
+    margin-top: 15px;
+}
+
+/* ----------------- Contact ----------------- */
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+#contact a.btn-contact {
+    padding: 12px 25px;
+    background-color: #00ffff;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+#contact a.btn-contact:hover {
+    background-color: #00bfbf;
+}
+
+/* ----------------- Responsive ----------------- */
+@media(max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 8px 0;
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    p.description, .service-item p {
+        font-size: 0.9em;
+    }
+    .tarif-item, .service-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    body::before {
+        background-size: contain;
+        opacity: 0.1;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#temoignages">Témoignages</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Section Services -->
+<section id="services">
+    <h1>Nos Services</h1>
+    <div class="service-item">
+        <h3>Installation & Configuration</h3>
+        <p>Nous installons et configurons tous vos équipements pour un fonctionnement optimal.</p>
+    </div>
+    <div class="service-item">
+        <h3>Audit Sécurité</h3>
+        <p>Analyse complète de votre réseau et recommandations pour améliorer votre sécurité.</p>
+    </div>
+    <div class="service-item">
+        <h3>Maintenance & Support</h3>
+        <p>Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
+    </div>
+    <div class="service-item">
+        <h3>Formation</h3>
+        <p>Sessions personnalisées pour vos équipes sur logiciels et sécurité.</p>
+    </div>
+</section>
+
+<!-- Section Tarifs -->
+<section id="tarifs">
+    <h1>Nos Tarifs</h1>
+    <div class="tarif-item">
+        <h3>Installation complète</h3>
+        <p class="price">100 000 FCFA</p>
+        <p class="description">Installation de tous vos équipements + configuration complète du système.</p>
+        <a href="#contact" class="btn">Demander ce service</a>
+    </div>
+    <div class="tarif-item">
+        <h3>Audit Sécurité</h3>
+        <p class="price">75 000 FCFA</p>
+        <p class="description">Analyse complète de votre réseau et recommandations pour renforcer la sécurité.</p>
+        <a href="#contact" class="btn">Demander ce service</a>
+    </div>
+    <div class="tarif-item">
+        <h3>Maintenance</h3>
+        <p class="price">50 000 FCFA</p>
+        <p class="description">Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
+        <a href="#contact" class="btn">Demander ce service</a>
+    </div>
+    <div class="tarif-item">
+        <h3>Formation</h3>
+        <p class="price">60 000 FCFA</p>
+        <p class="description">Sessions de formation personnalisées pour vos équipes sur les logiciels et la sécurité.</p>
+        <a href="#contact" class="btn">Demander ce service</a>
+    </div>
+</section>
+
+<!-- Section Témoignages -->
+<section id="temoignages">
+    <h1>Témoignages</h1>
+    <div class="temoignages-grid">
+        <div class="temoignage-card">
+            <p>"Excellente prestation, l’équipe a été très professionnelle et rapide."</p>
+            <h4>- Jean M.</h4>
+        </div>
+        <div class="temoignage-card">
+            <p>"Audit sécurité très complet, nous avons beaucoup appris."</p>
+            <h4>- Amina K.</h4>
+        </div>
+        <div class="temoignage-card">
+            <p>"La maintenance a sauvé notre réseau, je recommande Nexora Tech !"</p>
+            <h4>- Didier T.</h4>
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact">
+    <h1>Contactez-Nous</h1>
+    <a href="mailto:contact@nexora-tech.com" class="btn-contact">Envoyer un message</a>
+</section>
+
+</body>
+</html>
+
+    <!-- Bouton flottant pour ouvrir l'assistante -->
+<button id="assistantBtn">💬 Assistant</button>
+
+<!-- Fenêtre de chat -->
+<div id="assistantChat" style="display:none;">
+    <div id="chatHeader">Assistante Virtuelle</div>
+    <div id="chatBody"></div>
+    <input type="text" id="chatInput" placeholder="Écris ta question...">
+    <button id="sendBtn">Envoyer</button>
+</div>
+
+<style>
+/* --- Bouton flottant --- */
+#assistantBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffff;
+    transition: transform 0.3s;
+}
+#assistantBtn:hover { transform: scale(1.1); }
+
+/* --- Fenêtre chat --- */
+#assistantChat {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 320px;
+    max-height: 450px;
+    background-color: #111111;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 25px #00ffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    z-index: 999;
+    animation: appear 0.5s ease;
+}
+@keyframes appear {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+#chatHeader {
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+#chatBody {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 0.95em;
+}
+
+#chatInput {
+    border: none;
+    padding: 10px;
+    border-top: 1px solid #00ffff;
+    width: calc(100% - 60px);
+    background-color: #111111;
+    color: #fff;
+}
+
+#sendBtn {
+    width: 50px;
+    border: none;
+    background-color: #00ffff;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#sendBtn:hover { background-color: #00bfbf; }
+
+/* --- Messages --- */
+.userMsg { color:#ffffff; margin:5px 0; }
+.assistantMsg { color:#00ffff; margin:5px 0; }
+</style>
+
+<script>
+const assistantBtn = document.getElementById("assistantBtn");
+const assistantChat = document.getElementById("assistantChat");
+const chatBody = document.getElementById("chatBody");
+const chatInput = document.getElementById("chatInput");
+const sendBtn = document.getElementById("sendBtn");
+
+// --- Toggle chat window ---
+assistantBtn.onclick = () => {
+    assistantChat.style.display = assistantChat.style.display === "none" ? "flex" : "none";
+};
+
+// --- Initialiser le rapport ---
+let rapport = JSON.parse(localStorage.getItem("rapport")) || {
+    projets: ["Nexora Tech"],
+    actionsEffectuees: [],
+    prochainesEtapes: ["Optimiser section Services", "Vérifier responsive mobile", "Ajouter glow sur cartes"],
+    notes: ["Menu néon ajouté", "Prix visibles", "Témoignages inclus"]
+};
+
+// --- Fonction pour afficher le rapport ---
+function afficherRapport() {
+    chatBody.innerHTML = ""; // réinitialise
+    chatBody.innerHTML += `<div class="assistantMsg"><b>Rapport actuel :</b></div>`;
+    chatBody.innerHTML += `<div class="assistantMsg">Projets: ${rapport.projets.join(", ")}</div>`;
+    chatBody.innerHTML += `<div class="assistantMsg">Actions effectuées: ${rapport.actionsEffectuees.join(", ") || "Aucune"}</div>`;
+    chatBody.innerHTML += `<div class="assistantMsg">Prochaines étapes: ${rapport.prochainesEtapes.join(", ")}</div>`;
+    chatBody.innerHTML += `<div class="assistantMsg">Notes: ${rapport.notes.join(", ")}</div>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// --- Afficher le rapport dès l'ouverture ---
+afficherRapport();
+
+// --- Fonction envoyer message ---
+function envoyerMessage() {
+    const userText = chatInput.value.trim();
+    if(!userText) return;
+
+    // Message utilisateur
+    chatBody.innerHTML += `<div class="userMsg"><b>Vous:</b> ${userText}</div>`;
+
+    // Réponse automatique simple
+    let response = "Désolé, je n'ai pas compris 😅";
+    const text = userText.toLowerCase();
+
+    if(text.includes("services")) response = "Nos services: Installation, Audit Sécurité, Maintenance, Formation.";
+    if(text.includes("tarifs")) response = "Nos tarifs vont de 50 000 FCFA à 100 000 FCFA selon le service.";
+    if(text.includes("contact")) response = "Vous pouvez nous contacter via le formulaire ou à contact@nexora-tech.com.";
+    if(text.includes("rapport")) response = "Voici ton rapport actuel. Consulte les messages ci-dessus.";
+
+    // Ajouter la réponse
+    chatBody.innerHTML += `<div class="assistantMsg"><b>Assistant:</b> ${response}</div>`;
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Sauvegarder le message dans le rapport pour suivi
+    rapport.actionsEffectuees.push(userText);
+    localStorage.setItem("rapport", JSON.stringify(rapport));
+
+    chatInput.value = "";
+}
+
+// --- Bouton envoyer ---
+sendBtn.onclick = envoyerMessage;
+
+// --- Entrée clavier "Enter" ---
+chatInput.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") envoyerMessage();
+});
+</script> 
+    <!-- Section Services -->
+<section id="services">
+    <h1>Nos Services</h1>
+    <div class="service-item">
+        <h3>Installation & Configuration</h3>
+        <p>Installation rapide et configuration optimale de tous vos équipements.</p>
+    </div>
+    <div class="service-item">
+        <h3>Audit Sécurité</h3>
+        <p>Analyse générale pour détecter les failles et sécuriser votre réseau.</p>
+    </div>
+    <div class="service-item">
+        <h3>Maintenance & Support</h3>
+        <p>Entretien régulier et dépannage rapide pour tous vos équipements.</p>
+    </div>
+</section>
+
+<!-- Section Tarifs -->
+<section id="tarifs">
+    <h1>Nos Tarifs</h1>
+    <div class="tarif-item">
+        <h3>Audit Sécurité</h3>
+        <p class="price">75 000 FCFA</p>
+        <p class="description">Audit complet détaillé : analyse du réseau, détection de failles, recommandations et plan d’action.</p>
+        <a href="#contact" class="btn">Demander ce service</a>
+    </div>
+</section>
     <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -832,6 +1090,7 @@ function closePopup(id) {
 
 </body>
 </html>
+
 
 
 
