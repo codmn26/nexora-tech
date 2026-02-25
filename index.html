@@ -138,7 +138,33 @@ footer{
 <body>
 
 <header>
-<h1>NEXORA TECH</h1>
+<div class="logo">
+    <span class="logo-icon">NT</span>
+    <span class="logo-text">NEXORA TECH</span>
+</div>
+    .logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.logo-icon{
+    background:#00ffff;
+    color:black;
+    font-weight:bold;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:1.2rem;
+}
+
+.logo-text{
+    font-size:1.8rem;
+    font-weight:bold;
+    color:#00ffff;
+    letter-spacing:2px;
+}
 <p>Installation • Sécurité • Maintenance • Formation</p>
 <p><strong>Horaires :</strong> Lundi - Samedi | 08h00 - 18h00</p>
 <a href="https://wa.me/2290144218580" class="btn">WhatsApp Direct</a>
@@ -152,8 +178,13 @@ footer{
 
 <section id="services">
 <h2>Nos Services</h2>
-<div class="grid">
+<div class="card">
 
+    <div class="card">
+    <h3>Création de Logo</h3>
+    <p>Conception de logos modernes, professionnels et adaptés à votre image de marque.</p>
+    <a href="#tarifs" class="btn secondary">Voir plus</a>
+</div>
 <div class="card">
 <h3>Installation & Configuration</h3>
 <p>Mise en place complète de vos équipements.</p>
@@ -179,6 +210,11 @@ footer{
 <h2>Nos Tarifs Promotionnels</h2>
 <div class="grid">
 
+    <div class="card">
+    <h3>Création de Logo</h3>
+    <p class="price">15 000 FCFA</p>
+    <a href="https://wa.me/2290144218580" class="btn">Demander ce service</a>
+</div>
 <div class="card">
 <h3>Installation</h3>
 <p class="price">35 000 FCFA</p>
@@ -214,3 +250,4 @@ footer{
 
 </body>
 </html>
+
