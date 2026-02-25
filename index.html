@@ -517,11 +517,294 @@
             margin: auto;
         }
     </style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexora Tech - Tarifs</title>
+<style>
+    /* ----------------- Général ----------------- */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0a0a0a; /* Fond sombre */
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    /* ----------------- Menu ----------------- */
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: #111111;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #00ffff; /* Accent tech */
+    }
+
+    /* ----------------- Section ----------------- */
+    section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    h1, h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #00ffff;
+    }
+
+    /* ----------------- Tableaux Tarifs ----------------- */
+    .pricing-table {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    .pricing-card {
+        background-color: #111111;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    }
+    .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 25px rgba(0,255,255,0.3);
+    }
+    .pricing-card h3 {
+        margin-bottom: 15px;
+        color: #00ffff;
+    }
+    .price {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    .description {
+        font-size: 0.9em;
+        color: #ccc;
+        margin-bottom: 20px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #00ffff;
+        color: #000;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background-color: #00bfbf;
+    }
+
+    /* ----------------- Overlay Fond Subtil ----------------- */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url('a_digital_background_background_features_a_dark_t.png') center/cover no-repeat;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    /* ----------------- Responsive ----------------- */
+    @media(max-width: 600px) {
+        nav {
+            flex-direction: column;
+        }
+        nav a {
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Section Tarifs -->
+<section id="tarifs">
+    <h1>Nos Tarifs</h1>
+    <div class="pricing-table">
+        <div class="pricing-card">
+            <h3>Installation complète</h3>
+            <p class="price">100 000 FCFA</p>
+            <p class="description">Installation de tous vos équipements + configuration complète du système.</p>
+            <a href="#contact" class="btn">Demander ce service</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Audit Sécurité</h3>
+            <p class="price">75 000 FCFA</p>
+            <p class="description">Analyse complète de votre réseau et recommandations pour renforcer la sécurité.</p>
+            <a href="#contact" class="btn">Demander ce service</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Maintenance</h3>
+            <p class="price">50 000 FCFA</p>
+            <p class="description">Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
+            <a href="#contact" class="btn">Demander ce service</a>
+        </div>
+        <div class="pricing-card">
+            <h3>Formation</h3>
+            <p class="price">60 000 FCFA</p>
+            <p class="description">Sessions de formation personnalisées pour vos équipes sur les logiciels et la sécurité.</p>
+            <a href="#contact" class="btn">Demander ce service</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+   <section id="services">
+    <h1>Nos Services</h1>
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Installation & Configuration</h3>
+            <p class="description">Nous installons et configurons tous vos équipements pour un fonctionnement optimal.</p>
+        </div>
+        <div class="service-card">
+            <h3>Audit Sécurité</h3>
+            <p class="description">Analyse complète de votre réseau et recommandations pour améliorer votre sécurité.</p>
+        </div>
+        <div class="service-card">
+            <h3>Maintenance & Support</h3>
+            <p class="description">Entretien régulier et dépannage rapide pour tous vos équipements informatiques.</p>
+        </div>
+        <div class="service-card">
+            <h3>Formation</h3>
+            <p class="description">Sessions personnalisées pour vos équipes sur logiciels et sécurité.</p>
+        </div>
+    </div>
+</section>
+
+<section id="temoignages">
+    <h1>Témoignages</h1>
+    <div class="temoignages-grid">
+        <div class="temoignage-card">
+            <p>"Excellente prestation, l’équipe a été très professionnelle et rapide."</p>
+            <h4>- Jean M.</h4>
+        </div>
+        <div class="temoignage-card">
+            <p>"Audit sécurité très complet, nous avons beaucoup appris."</p>
+            <h4>- Amina K.</h4>
+        </div>
+        <div class="temoignage-card">
+            <p>"La maintenance a sauvé notre réseau, je recommande Nexora Tech !"</p>
+            <h4>- Didier T.</h4>
+        </div>
+    </div>
+</section>
+
+<section id="partenaires">
+    <h1>Nos Partenaires</h1>
+    <div class="logos-grid">
+        <img src="logo1.png" alt="Partenaire 1">
+        <img src="logo2.png" alt="Partenaire 2">
+        <img src="logo3.png" alt="Partenaire 3">
+        <img src="logo4.png" alt="Partenaire 4">
+    </div>
+</section>
+
+<style>
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.service-card {
+    background-color: #111111;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+.service-card h3 {
+    color: #00ffff;
+    margin-bottom: 15px;
+}
+.service-card p {
+    color: #ccc;
+}
+
+/* Témoignages */
+.temoignages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.temoignage-card {
+    background-color: #111111;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    color: #ccc;
+    box-shadow: 0 0 15px rgba(0,255,255,0.1);
+}
+.temoignage-card h4 {
+    margin-top: 15px;
+    color: #00ffff;
+}
+
+/* Logos partenaires */
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+}
+.logos-grid img {
+    max-height: 80px;
+    filter: brightness(0.8);
+    transition: transform 0.3s, filter 0.3s;
+}
+.logos-grid img:hover {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+</style>
+    
 </head>
 <body>
     <div class="container">
         <h1>Bienvenue dans l'univers Tech</h1>
-        <p>Ce site utilise un fond sombre inspiré de l'informatique, avec des circuits, du code flou et un style élégant. Tout est conçu pour rester discret et mettre votre contenu en avant.</p>
+        <p>Ce site utilise un fond sombre inspiré de l'informatique, avec des circuits, du code flou et un style élégant. Tout est conçu pour rester discret et mettre votre contenu en avant et améliorer votre expérience.</p>
     </div>
 </body>
 </html>
@@ -549,6 +832,7 @@ function closePopup(id) {
 
 </body>
 </html>
+
 
 
 
